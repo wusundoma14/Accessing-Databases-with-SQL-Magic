@@ -13,7 +13,7 @@ To communicate with SQL Databases from within a JupyterLab notebook, we can use 
 
 To install ipython-sql extension, run the script below in a code cell:
 
-!pip install ipython-sql
+-!pip install ipython-sql-
 
 
 The above magic command loads the ipython-sql extension. We can connect to any database which is supported by SQLAlchemy. Here we will connect to an existing MySQL database. However, in order to do that, you'll first need to retrieve your credentials and connect to your MySQL database.
