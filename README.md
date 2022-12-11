@@ -13,25 +13,38 @@ To communicate with SQL Databases from within a JupyterLab notebook, we can use 
 
 To install ipython-sql extension, run the script below in a code cell:
 
-_!pip install ipython-sql_
+**!pip install ipython-sql**
 
 
 The above magic command loads the ipython-sql extension. We can connect to any database which is supported by SQLAlchemy. Here we will connect to an existing MySQL database. However, in order to do that, you'll first need to retrieve your credentials and connect to your MySQL database.
 
 
 
-import os 
+**import os 
 
-from dotenv import load_dotenv
-load_dotenv() 
+**from dotenv import load_dotenv
+**load_dotenv() 
 
-myuser = os.environ.get('mysql_username')      # e.g. 'root'
-mypassword= os.environ.get('mysql_password')   # e.g. 'sample-password' 
+**myuser = os.environ.get('mysql_username')      # e.g. 'root'
+**mypassword= os.environ.get('mysql_password')   # e.g. 'sample-password' 
 
-connection_url = 'mysql://{user}:{password}@localhost/ibm_sql_lab'.format(user=myuser,password=mypassword)
+**connection_url = 'mysql://{user}:{password}@localhost/ibm_sql_lab'.format(user=myuser,password=mypassword)
 
-%sql {connection_url}
+**%sql {connection_url}
 
 
-*If it gives an empty output or non error output, then you are connected to your MySQL Database* 
+**If it gives an empty output or non error output, then you are connected to your MySQL Database
+
 For convenience, we can use %%sql (two %'s instead of one) at the top of a cell to indicate we want the entire cell to be treated as SQL. Let's use this to create a table and fill it with some test data for experimenting.
+
+
+
+
+
+
+
+
+
+
+
+
